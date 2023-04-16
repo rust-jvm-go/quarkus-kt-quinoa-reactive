@@ -1,21 +1,19 @@
 {
-  "name": "quinoa-bowl",
+  "name": "quinoa-nuxt3",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production",
-    "start": "webpack-dev-server --mode=development --port 3000"
-  },
-  "keywords": [],
-  "license": "MIT",
-  "dependencies": {
-    "theaterjs": "3.2.0"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "start": "npm run dev -- -o",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0",
-    "copy-webpack-plugin": "^10.2.4"
+    "nuxt": "^3.4.1",
+    "vite": "^4.2.1",
+    "vite-svg-loader": "^4.0.0",
+    "vue": "^3.2.47"
   }
 }
