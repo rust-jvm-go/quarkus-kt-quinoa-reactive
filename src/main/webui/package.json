@@ -11,14 +11,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "flowbite": "^1.6.5",
     "theaterjs": "^3.2.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxtjs/tailwindcss": "^6.6.6",
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.4.1",
     "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.1",
     "vite": "^4.2.1",
     "vite-svg-loader": "^4.0.0",
     "vue": "^3.2.47"

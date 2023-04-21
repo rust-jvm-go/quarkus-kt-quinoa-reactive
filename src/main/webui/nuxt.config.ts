@@ -10,9 +10,6 @@ export default defineNuxtConfig({
     /*"@": fileURLToPath(new URL("./", import.meta.url)),*/
     assets: "/<rootDir>/assets",
   },
-  modules: [
-    "@nuxtjs/color-mode"
-  ],
   css: [
     "@/assets/css/quinoa.css"
   ],
@@ -20,6 +17,11 @@ export default defineNuxtConfig({
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
-    },
-  }
+    }
+  },
+  modules: [
+    "@nuxtjs/color-mode",
+    "@nuxtjs/tailwindcss"
+  ],
+  plugins: []
 })
