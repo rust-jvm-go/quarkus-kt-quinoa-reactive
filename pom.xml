@@ -6,19 +6,23 @@
 
   <groupId>initiative.quarkus.kotlin.quinoa</groupId>
   <artifactId>quarkus-kt-quinoa-reactive</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
 
   <properties>
-    <compiler-plugin.version>3.11.0</compiler-plugin.version>
-    <kotlin.version>1.8.20</kotlin.version>
-    <maven.compiler.release>17</maven.compiler.release>
+    <maven.compiler.parameters>true</maven.compiler.parameters>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-    <quarkus.platform.version>2.16.6.Final</quarkus.platform.version>
     <skipITs>true</skipITs>
-    <surefire-plugin.version>3.0.0</surefire-plugin.version>
+    <skipTests>true</skipTests>
+
+    <kotlin.version>1.9.21</kotlin.version>
+    <quarkus.platform.version>3.5.3</quarkus.platform.version>
+    <quarkiverse-quinoa.version>2.2.1</quarkiverse-quinoa.version>
+    <compiler-plugin.version>3.11.0</compiler-plugin.version>
+    <surefire-plugin.version>3.2.2</surefire-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -57,7 +61,7 @@
     <dependency>
       <groupId>io.quarkiverse.quinoa</groupId>
       <artifactId>quarkus-quinoa</artifactId>
-      <version>1.2.9</version>
+      <version>${quarkiverse-quinoa.version}</version>
     </dependency>
 
     <dependency>
@@ -212,6 +216,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${surefire-plugin.version}</version>
         <configuration>
+          <skipTests>${skipTests}</skipTests>
           <systemPropertyVariables>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
             <!--suppress UnresolvedMavenProperty -->
@@ -278,8 +283,10 @@
 
         <configuration>
 
+          <!--
           <javaParameters>true</javaParameters>
           <jvmTarget>17</jvmTarget>
+          -->
 
           <compilerPlugins>
             <plugin>all-open</plugin>

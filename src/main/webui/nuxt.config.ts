@@ -2,9 +2,19 @@
 
 /*import {fileURLToPath} from "url";*/
 
+import svgLoader from "vite-svg-loader";
+
 export default defineNuxtConfig({
   typescript: {
     shim: false
+  },
+  vite: {
+    define: {
+      "process.env.DEBUG": false
+    },
+    plugins: [
+      svgLoader()
+    ]
   },
   alias: {
     /*"@": fileURLToPath(new URL("./", import.meta.url)),*/
