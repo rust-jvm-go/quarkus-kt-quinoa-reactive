@@ -16,12 +16,8 @@ export default defineNuxtConfig({
       svgLoader()
     ]
   },
-  alias: {
-    /*"@": fileURLToPath(new URL("./", import.meta.url)),*/
-    assets: "/<rootDir>/assets",
-  },
   css: [
-    "@/assets/css/quinoa.css"
+    "~/assets/css/quinoa.css"
   ],
   postcss: {
     plugins: {
